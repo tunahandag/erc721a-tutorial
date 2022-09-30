@@ -3,7 +3,6 @@
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "erc721a/contracts/ERC721A.sol";
 
@@ -13,7 +12,7 @@ contract Fish is ERC721A, Pausable, Ownable, ReentrancyGuard {
 	using Strings for uint256;
 
 	uint64 public maxSupply = 3000;
-	uint64 private mintPrice = 0.15 ether;
+	uint64 private mintPrice = 1 ether;
 	uint64 private constant maxAirdropAmount = 100;
 
 	uint64 private maxMintsPerAddress = 20;
@@ -164,7 +163,7 @@ contract Fish is ERC721A, Pausable, Ownable, ReentrancyGuard {
 	 */
 
 	function tokenURI(uint256 tokenId) public view override returns (string memory) {
-		require(_exists(tokenId), "ERC721A: Query for non-existent token");
+		require(_exists(tokenId), "FI$H: Query for non-existent token");
 		return
 			bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
 	}
