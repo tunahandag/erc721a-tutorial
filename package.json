@@ -1,10 +1,11 @@
 {
 	"name": "erc721a-tutorial",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "This repository shows an example usage of ERC721A minting standard using Hardhat",
 	"main": "index.js",
 	"scripts": {
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"release": "standard-version"
 	},
 	"repository": {
 		"type": "git",
