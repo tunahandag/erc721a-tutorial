@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
 
+import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-import "erc721a/contracts/ERC721A.sol";
-
-pragma solidity ^0.8.9;
 
 contract Fish is ERC721A, Pausable, Ownable, ReentrancyGuard {
 	using Strings for uint256;
